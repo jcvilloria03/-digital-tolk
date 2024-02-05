@@ -41,4 +41,25 @@ OR
 
 Thank you!
 
+===== thoughts about the code =====
+- Overall the code is okay except for the points below
+- Check for errors early and return immediately so it will not pass other if...else codes.
+- I would like to emphasize that all request params in the BookingController has no validate which should be done to avoid or minimize errors.
+- Use ternary operator as much as possible for a more readable code.
+- Remove comments in code if they are not needed such as old code that is not being used. 
+===== Notes regarding refactored code =====
+1) app/Http/Controllers/BookingController.php
+   a. PHP variables should be camel case
+   b. Store env values in a variable
+   c. use guard clause to avoid going into into other codes if you can return it immediately.
+   d. use validation to check valid parameter values
+   e. depending on version, don't use deprecated codes
+   f. use ternary operator as much as possible
+2) app/Repository/BookingRepository.php
+   a. add logger to the constructor
+   b. use type hinting in the method params
+   c. PHP variables should be camel case
 
+===== Location of code test =====
+3) test/app/unit/HelpersTest.php
+4) test/app/unit/UserRepositoryTest.php
